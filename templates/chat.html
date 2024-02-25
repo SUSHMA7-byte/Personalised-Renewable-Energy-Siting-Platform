@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-image: url('/static/renew.jpg');
+            background-color: #fbd4d4ba;
+            background-size: cover;
+        }
+
+        #card{
+            width: 25vw;
+            border-style: inset;
+            border-radius: 30px;
+            border-color: black;
+            background-color: #ffffff;
+            margin-left: 35vw;
+            margin-top: 5vw;
+            margin-bottom: 5vw;
+            height: 75vh;
+        }
+
+        #message::-webkit-scrollbar {
+            width: 12px; /* width of the entire scrollbar */
+        }
+
+        #message::-webkit-scrollbar-thumb {
+            background-color: #010101; /* color of the thumb */
+            border-radius: 10px; /* roundness of the thumb */
+        }
+
+        #message::-webkit-scrollbar-track {
+            background-color: #f0f0f0; /* color of the track */
+        }
+
+        #head{
+           text-align: center;
+        }
+
+        #msg{
+            border: 1px solid #222222;
+            margin:0.5vw 0.5vw 3vw 2vw;
+        }
+
+        #send{
+            margin:0.5vw 0.5vw 3vw 1vw;
+        }
+
+        #message{
+            background-color: #ffffff;
+            margin:0.5vw 0.7vw 0.5vw 0.7vw;
+            border-radius: 5px;
+            border-color: rgb(37, 36, 36);
+            overflow-y: auto;
+            height: 50vh;
+            scrollbar-width: thin;
+            scrollbar-color: #ccc #f0f0f0;
+            padding: 10px;
+        }
+
+        .message1{
+            background-color: #eae7e7;
+            border-radius: 10px;
+            border-color: #010101;
+            margin-top: 5px;
+            padding: 5px;
+            margin-right: 5vw;
+        }
+
+        .message2{
+            background-color: #676464;
+            border-radius: 10px;
+            border-color: #010101;
+            margin-top: 5px;
+            padding: 5px;
+            margin-left: 5vw;
+        }
+        .back-button {
+    font-size: 30px;
+    position: absolute;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+}
+    </style>
+</head>
+<body>
+    <div id="card">
+        <div id="head">
+            <h1>Let's Chat!</h1>
+        </div>
+        <div id="message"></div>
+        <input type="text" id="msg" placeholder="Type a message...">&nbsp;&nbsp;<button id="send" onclick="send()">Send</button>
+    </div>
+    <script>
+        function send() {
+            var message = document.getElementById("message");
+            var userInput = document.getElementById("msg").value;
+            document.getElementById("message").innerHTML += '<div class="message1"><strong>You:</strong> ' + userInput + '</div>';
+            document.getElementById("msg").value = "";
+
+            fetch("/get?msg=" + userInput)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("message").innerHTML += '<div class="message2"><strong>Bot:</strong> ' + data + '</div>';
+            });
+            message.scrollTop = message.scrollHeight;
+        }
+    </script>
+    <a href="back.html" class="back-button">Back</a>
+</body>
+</html>

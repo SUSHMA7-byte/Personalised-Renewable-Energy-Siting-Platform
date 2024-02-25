@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body{
+            background-image: url('/static/bg.jpg');
+           background-size: cover;
+        }
+        #map{
+            margin-left: 2vw;
+            margin-top: 5vwvw;
+            width: 35vw;
+            height: 25vw;
+            border: 1px solid #403f3f; /* Optional: adds a border around the map */
+            border-radius: 8px; /* Optional: rounds the corners of the map container */
+            
+        
+            
+            
+        }
+        #container h2{
+            font-family: cursive;
+            margin-left: 2vw;
+            margin-top: 2vw;
+            padding-left: 6vw;
+            color: #ffffff;
+            
+        } 
+        #locationForm{
+            padding-left: 5vw;
+            padding-top: 3vw;
+        }
+        #head{
+            font-family: cursive;
+            text-align: center;
+            color: #ffffff;
+        }
+        #coordinates {
+            
+            margin-top: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+            margin-left: 5vw;
+            font-weight: bold;
+
+        }
+        #container {
+            float: right;
+            width: 50%;
+        }
+
+        #form1 {
+            float: left;
+            width: 50%;
+        }
+
+        /* Clear the float to prevent layout issues */
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style adjustments for better appearance, feel free to modify as needed */
+        #container, #form1 {
+            padding: 0px 20px 20px 20px;
+            box-sizing: border-box;
+        }
+
+        form {
+            margin: 0; /* Remove default margin */
+        }
+        .labels{
+            font-size: medium;
+            font-family: cursive;
+            font-weight: bold;
+            font-size: medium;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .inp{
+            margin-top: 1vw;
+            border-radius: 10px;
+            width: 15vw;
+            height: 3vw;
+            text-align: center;
+        }
+        #sub{
+            width: 10vw;
+            height: 3vw;
+            font-weight: bold;
+            background-color: rgb(191, 17, 17);
+            border: solid px rgb(76, 174, 186);
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <h2>Find which renewable energy suits your Requirement!</h2>
+    </div>
+    <div class="clearfix">
+        
+        <div id="form1">
+            <form id="locationForm" class="form" action="/predict_gb" method="post">
+                <label name="lat" class="labels">Latitude&nbsp;</label><br>
+                <input type="text" id="latitude" name="latitude" class="inp" placeholder="Latitude" readonly><br><br><br>
+                <label name="lat" class="labels">Longitude&nbsp;</label><br>
+                <input type="text" id="longitude" name="longitude" class="inp" placeholder="Longitude" readonly><br><br><br>
+                <label name="lat" class="labels">Energy Need&nbsp;</label><br>
+                <input type="text" id="energy" name="energy" class="inp" placeholder="Enter the energy need" required><br><br><br>
+                <label name="lat" class="labels">Budget&nbsp;</label><br>
+                <input type="text" id="budget" name="budget" class="inp" placeholder="Enter the Budget" required><br><br><br>
+                <label name="lat" class="labels">Square Feet&nbsp;</label><br>
+                <input type="text" id="squarefeet" name="squarefeet" class="inp" placeholder="Enter the square feet" required><br><br><br>
+                <button type="submit" id="sub">Submit</button>
+            </form>
+        </div>
+    <div id="container">
+        <h2>Select Location on map!</h2>
+        <div id="map"></div>
+        <p id="coordinates"></p>
+    </div>
+</div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="static/app.js"></script>
+
+
+</body>
+</html>

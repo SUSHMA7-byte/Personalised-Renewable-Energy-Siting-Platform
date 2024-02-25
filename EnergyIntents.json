@@ -1,0 +1,256 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi there", "Hello", "Good day", "Hey","hello","hiiii","Hiiii"],
+      "responses": ["Hello! Welcome to our renewable energy recommendation platform. How can I assist you today?"],
+      "context": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": ["Goodbye! Have a great day ahead!"],
+      "context": ""
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "Appreciate it"],
+      "responses": ["You're welcome! If you have any more questions, feel free to ask."],
+      "context": ""
+    },
+    {
+      "tag": "recommendation",
+      "patterns": ["Can you recommend renewable energy solutions for my home?"],
+      "responses": ["Solar power, Solar heating, Air source heat pumps, Wind energy, Biomass systems, Hydrolectric systems, etc."],
+      "context": ""
+    },
+    {
+      "tag": "recommendation",
+      "patterns": ["What renewable energy options are suitable for me?"],
+      "responses": ["To provide you with personalized recommendations, could you please provide some information about your location, energy needs, budget, and any specific preferences you may have?"],
+      "context": ""
+    }, 
+    {
+      "tag": "location_input",
+      "patterns": ["My location is in [location]", "I live in [location]", "Location: [location]"],
+      "responses": ["Head over to the estimation page and give location , energy needs and budget to find the renewable energy."],
+      "context": "location"
+    },
+    {
+      "tag": "energy_needs_input",
+      "patterns": ["My energy needs are [energy_needs]", "I need energy for [energy_needs]", "Energy needs: [energy_needs]"],
+      "responses": ["Head over to the estimation page and give location , energy needs and budget to find the renewable energy."],
+      "context": "energy_needs"
+    },
+    {
+      "tag": "budget_input",
+      "patterns": ["My budget is [budget]", "I have a budget of [budget]", "Budget: [budget]"],
+      "responses": ["Head over to the estimation page and give location , energy needs and budget to find the renewable energy."],
+      "context": "budget"
+    },
+    {
+      "tag": "preference_input",
+      "patterns": ["My preferences include [preferences]", "I prefer [preferences]", "Preferences: [preferences]"],
+      "responses": ["Head over to the estimation page and give location , energy needs and budget to find the renewable energy that suits your preference."],
+      "context": "preferences"
+    },
+    {
+      "tag": "recommendation_result",
+      "patterns": [],
+      "responses": ["Based on your input, here are personalized recommendations for renewable energy solutions that best fit your needs:"],
+      "context": ""
+    },
+    {
+      "tag": "solar",  
+      "patterns": ["What is solar energy?"],
+      "responses": ["Solar energy is radiant light and heat from the Sun that is harnessed using a range of technologies such as solar power to generate electricity, solar thermal energy and solar architecture."],
+      "context": ""
+    },
+    {
+      "tag": "solar cost",
+      "patterns": ["What is the cost of solar energy?","What is the cost for solar energy installation?"],
+      "responses": ["Solar energy costs $0.08 to $0.10kWh to produce in an average","The approximate cost for solar energy installation typically ranges from $2,000 to $4,000 per kilowatt (kW)."],
+      "context": ""
+    },
+    {
+      "tag": "solar benefits",  
+      "patterns": ["What are the benefits of solar energy?"],
+      "responses": ["Adavantages of solar energy includes energy savings, versatility, increased home values, long performance"],
+      "context": ""
+    },
+    {
+      "tag": "solar need",  
+      "patterns": ["What are the need for setting "],
+      "responses": ["For setting up a solar panel we need a constant source of sunlight"],
+      "context": ""
+    },
+    {
+      "tag": "solar affect",
+      "patterns": ["How does geography affect solar energy?"],
+      "responses": ["Geography affects solar energy potential because areas that are closer to the equator have a higher amount of solar radiation."],
+      "context": ""
+    },
+    {
+      "tag": "solar passive",
+      "patterns": ["What is passive solar energy?"],
+      "responses": ["Passive solar techniques include orienting a building to the Sun, selecting materials with favorable thermal mass or light-dispersing properties, and designing spaces that naturally circulate air . The large magnitude of solar energy available makes it a highly appealing source of electricity."],
+      "context": ""
+    },
+    {
+      "tag": "solar power",
+      "patterns": ["Where can solar power be applied?"],
+      "responses": ["Solar energy can be used as Solar water heating, Solar distillation, Solar pumping, Solar drying of agricultural and animal products, Solar furnaces, Solar cooking, Solar electric power generation, Solar thermal power production,Solar green houses"],
+      "context": ""
+    },
+    {
+      "tag": "solar materials",
+      "patterns": ["What are the materials used for installing solar panel ?","what are the materials required for solar energy ?"],
+      "responses": ["Solar panels (photovoltaic modules): Cost varies depending on size and efficiency, ranging from $150 to $400 per panel.Inverter: Prices range from $500 to $2,000 depending on capacity and type (string, micro, or power optimizer).Mounting structures: Typically cost between $0.05 to $0.20 per watt installed, averaging around $500 to $2,000 for a residential system.Racking and mounting hardware: Additional expense, averaging around $500 to $1,000 for a residential installation.Solar charge controller: Cost varies based on capacity and features, ranging from $100 to $500.Battery bank: Prices vary significantly depending on capacity and type, ranging from $500 to several thousand dollars for a residential system.Monitoring systems: Costs can range from $100 to $500 or more depending on complexity and features."],
+      "context": ""
+    },
+    {
+      "tag": "wind ",
+      "patterns": ["What is wind energy?"],
+      "responses": ["Wind energy harnesses the power of wind through the use of wind turbines, tower, blades, generator, inverter, and optionally batteries for storage."], 
+      "context": ""
+    },
+    { 
+      "tag": "wind cost",
+      "patterns": ["What is the cost of wind energy installtion?"],
+      "responses": ["The approximate cost for wind energy installation typically ranges from $3,000 to $6,000 per kilowatt (kW)."],
+      "context": ""
+    },
+    {
+      "tag": "wind benefits",
+      "patterns": ["What are the benefits of wind energy?"],
+      "responses": ["Embracing wind energy not only reduces reliance on fossil fuels but also contributes to a cleaner and more sustainable energy future."],
+      "context": ""
+    },  
+    {
+       "tag": "wind work",
+       "patterns": ["How does wind energy work?"],
+       "responses": ["There is an air turbine of large blades attached on the top of a supporting tower of sufficient height. When wind strikes on the turbine blades, the turbine rotates due to the design and alignment of rotor blades. The shaft of the turbine is coupled with an electrical generator. The output of the generator is collected through electric power cables."],
+       "context": ""
+    },
+    {
+       "tag": "wind site",
+       "patterns": ["How are the site selection done for wind energy?"],
+       "responses": ["The best locations to place a wind turbine are the tops of rounded hills, on open plains and mountain passes where wind is naturally funneled through, a high elevated area"],
+       "context": ""
+    }, 
+    {
+      "tag": "wind avail",
+      "patterns": ["What is wind energy availability?"],
+      "responses": ["Wind energy is the availability is the measure of the potential for a wind turbine or a wind form to generate electrical power."],
+      "context": ""
+    },    
+    {
+      "tag": "hydro ",
+      "patterns": ["What is hydroelectric energy?"],
+      "responses": ["Hydroelectricity is produced from generators driven by turbines that convert the potential energy of falling or fast-flowing water into mechanical energy."],
+      "context": ""
+    },
+    {
+      "tag": "hydro power",
+      "patterns": ["What are the advantages of hydroelectric power?"],
+      "responses": ["It is stable, reliable, requires low operating cost, promotes guaranteed energy and price stability, helps fight climate changes,etc."],
+      "context": ""
+    },
+    {
+      "tag": "hydro avail",
+      "patterns": ["What is the availability of hydroelectric energy?"],
+      "responses": ["Hydroelectric energy is so large that it is called white coal for it's power and plenty."], 
+      "context": ""
+    },
+    {
+      "tag": "hydro install",
+      "patterns": ["What is the installation cost for hydroelectric powerplant?"],
+      "responses": ["The approximate cost for hydro energy installation typically ranges from $5,000 to $10,000 per kilowatt (kW)."],
+      "context": ""
+    },
+    {
+      "tag": "hydro generate",
+      "patterns": ["On what does the amount of electrical energy that can be generated by a hydroelectric power plant depends upon?"],
+      "responses": [" The amount of electrical energy that can be generated by a hydroelectric power plant depends upon quantity of water."],
+      "context": ""
+    },   
+    {
+      "tag": "hydro largest",
+      "patterns": ["Which is the largest hydroelectric power plant in India?"],
+      "responses": ["The Koyna hydroelectric plant located in Maharashtra is the largest hydroelectric power plant in India."],
+      "context": ""
+    } ,
+    {
+      "tag": "geothermal energy",
+      "patterns": ["What is geothermal energy?"],
+      "responses": ["Geothermal energy combines energy from the formation of the planet and from radioactive decay. It has been exploited as a source of heat and/or electric power for millennia."],
+      "context": ""
+    },
+    {
+      "tag": "geothermal production",
+      "patterns": ["How is geothermal energy produced?"],
+      "responses": ["Geothermal energy is produced from dry steam, flash steam, and binary cycle power stations."],
+      "context": ""
+    },
+    {
+      "tag": "geothermal estimate",
+      "patterns": ["What is the estimated geothermal utilization?"],
+      "responses": ["The estimated geothermal energy is the type of renewable energy where it can be utilized on the surface is 4.6*10^6 exajoules or about 1.4*10^6 terawatt years ."],
+      "context": ""
+    },
+    {
+      "tag": "geothermal cost",
+      "patterns": ["What is the average cost of geothermal power?"],
+      "responses": ["The average cost of geothermal power is around $0.07 per kilowatt-hour."],
+      "context": ""
+    },  
+    {
+      "tag": "geothermal uses",
+      "patterns": ["What are the most familiar uses of geothermal energy?"],
+      "responses": ["Geothermal energy are used in  space heating, water heating, agriculture, industrial processes, infrastructural maintenance, cooling, wastewater treatment, and electricity generation."],
+      "context": ""
+    },
+    {
+      "tag": "geothermal utilize",
+      "patterns": ["Why should we carefully utilize geothermal resources?"],
+      "responses": ["Geothermal energy is capable of providing carbon-free heat and continuous baseload power to compensate for the intermittency of wind and solar."],
+      "context": ""
+    },
+    {
+      "tag": "biomass energy",
+      "patterns": ["What is biomass energy in the context of bioenergy?","What is biomass energy?"],
+      "responses": ["Biomass means matter from recently living organisms either only from plants or from plants and algae."],
+      "context": ""
+    },
+    {
+      "tag": "biomass products",
+      "patterns": ["What are the biproducts of biomass?"],
+      "responses": ["It's biproducts include biofuels, bioenergy, biochar, starch-based and cellulose-based ethanol, bio-based adhesives, biochemicals, bioplastics, etc."],
+      "context": ""
+    },
+    {
+      "tag": "biomass usage",
+      "patterns": ["How is biomass used?"],
+      "responses": ["It is used to produce industrial products like enzymes and medicines."],
+      "context": ""
+    },
+    {
+      "tag": "biomass costs",
+      "patterns": ["How much does biomass costs in general?"],
+      "responses": ["Biomass Energy in general costs around 10-13c/KwH."],
+      "context": ""
+    },      
+    {
+      "tag": "biomass benefits",
+      "patterns": ["What are the benefits of biomass?"],
+      "responses": ["Its is low polluting, has low cost, used in rural development, etc"],
+      "context": ""
+    },
+    {
+      "tag": "biomass future",
+      "patterns": ["What is the future of biomass?"],
+      "responses": ["Biomass will be the key to reduce greenhouse emissions and waste."],
+      "context": ""
+    }
+  ]
+}

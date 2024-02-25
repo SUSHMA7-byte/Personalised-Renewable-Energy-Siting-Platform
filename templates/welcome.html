@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+<style>
+
+body {
+    background-color: rgb(249, 252, 252);
+}
+.welcome-section{
+    width: 50%;
+    float: left;
+}
+.image-container{
+    width: 50%;
+    float: right;
+    
+    
+}
+
+.image-container img {
+    width: 25vw; 
+    height: 30vw;
+    
+    margin-left: 9vw;
+}
+
+
+
+.welcome-section h1 {
+    color: blue;
+    font-size: 30px;
+    font-family:cursive;
+    font-weight: 20px;
+    font-style: initial;
+    margin: 0;
+    padding-left: 3vw;
+    padding-top: 10vw;
+}
+
+.welcome-section p {
+    color: rgb(22, 22, 44);
+    font-size: 20px;
+    font-family:cursive;
+    font-weight: 10px;
+    font-style: initial;
+    margin: 0;
+    padding-left: 3vw;
+    padding-right: 5vw;
+    margin-top: 15px;
+}
+
+.map-section button{
+    color: black;
+    margin-left:80px;
+    background-color: rgb(239, 169, 40);
+    border-radius:16px;
+    padding: 15px 30px; /* Increase padding for larger button */
+    font-size: 16px;
+    border-width: 4px;
+    font-weight: bold;
+    margin-top: 3vw;
+    
+    }
+
+.map-section button:hover{
+    background-color: rgb(88, 251, 91);
+}
+
+#head1{
+    margin-top: 0px;
+    text-align: left;
+    color:rgb(243, 12, 12);
+    font-size: 40px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+#back{
+    color:rgb(254, 254, 254);
+    font-size:20px ;
+    margin-left:90vw;
+    margin-top: 3vw;
+    width: 5vw;
+    height: 3vw;
+    background-color: #8383ea;
+    border-radius: 10px;
+    
+}
+    </style>
+</head>
+<body>
+    <h1 id="head1">SITUATE</h1>
+    <main>
+        <section class="welcome-section">
+            <h1 >IT'S TIME TO SHIFT TO RENEWABLE ENERGY SOURCE</h1>
+            <p>Find the energy that can be suited at your place,<br> let's make a renewable future.share your <br> Details and know it and get it planted!!! </p>
+            
+        </section>
+    </main>
+    <aside class="image-container">
+        <img id="img" src="{{ url_for('static', filename='side.png') }}" alt="Image">
+    </aside>
+    <section class="map-section">
+        <button onclick="map()">Get Started</button>
+    </section>
+    <button id="back" onclick="map1()">Back</button>
+    <script>
+        function map() {
+            window.location.href = 'map.html';
+        }
+        function map1() {
+            window.location.href = 'back.html';
+        }
+    </script>
+</body>
+</html>

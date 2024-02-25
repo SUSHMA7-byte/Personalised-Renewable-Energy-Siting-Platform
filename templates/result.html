@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimation Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #801313;
+            margin-top: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        
+    #one{
+        background-color: #dbd959;
+        border-radius: 20px;
+        padding: 5px;
+    }
+    #two{
+        background-color: #dbd959;
+        border-radius: 20px;
+        padding: 5px;
+        margin-top: 20px;
+    }
+    a:link, a:visited {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: red; /* Change the color on hover */
+    text-decoration: none; /* Remove underline on hover */
+  }
+    </style>
+</head>
+<body>
+    <h1>Estimation Result</h1>
+    
+    <h2>Items within Budget: {{ result.Items_within_budget }}</h2>
+    <div id="one">
+    <h2>Without Installation Cost:</h2>
+    {% if result.Without_installation_cost %}
+        <ul>
+            {% if result.Without_installation_cost.Maximum_panels %}
+                <li>Maximum Panels: {{ result.Without_installation_cost.Maximum_panels }}</li>
+            {% endif %}
+            {% if result.Without_installation_cost.Maximum_inverters %}
+                <li>Maximum Inverters: {{ result.Without_installation_cost.Maximum_inverters }}</li>
+            {% endif %}
+            {% if result.Without_installation_cost.Maximum_batteries %}
+                <li>Maximum Batteries: {{ result.Without_installation_cost.Maximum_batteries }}</li>
+            {% endif %}
+            {% if result.Without_installation_cost.Maximum_wind_turbines %}
+                <li>Maximum Wind Turbines: {{ result.Without_installation_cost.Maximum_wind_turbines }}</li>
+            {% endif %}
+            {% if result.Without_installation_cost.Maximum_capacity_per_turbine %}
+                <li>Maximum Capacity per Turbine: {{ result.Without_installation_cost.Maximum_capacity_per_turbine }}</li>
+            {% endif %}
+            {% if result.Without_installation_cost.Maximum_turbine %}
+                <li>Maximum Turbine: {{ result.Without_installation_cost.Maximum_turbine }}</li>
+            {% endif %}
+            {% if result.Without_installation_cost.Maximum_shaft %}
+                <li>Maximum Shaft: {{ result.Without_installation_cost.Maximum_shaft }}</li>
+            {% endif %}
+            {% if result.Without_installation_cost.Maximum_rotor %}
+                <li>Maximum Rotor: {{ result.Without_installation_cost.Maximum_rotor }}</li>
+            {% endif %}
+            {% if result.Without_installation_cost.Maximum_stator %}
+                <li>Maximum Stator: {{ result.Without_installation_cost.Maximum_stator }}</li>
+            {% endif %}
+            {% if result.Without_installation_cost.Maximum_generator %}
+                <li>Maximum Generator: {{ result.Without_installation_cost.Maximum_generator }}</li>
+            {% endif %}
+        </ul>
+    {% endif %}
+</div>
+<div id="two">
+    <h2>Considering Installation Cost:</h2>
+    {% if result.Considering_installation_cost %}
+        <ul>
+            {% if result.Considering_installation_cost.Maximum_panels_with_installation %}
+                <li>Maximum Panels with Installation: {{ result.Considering_installation_cost.Maximum_panels_with_installation }}</li>
+            {% endif %}
+            {% if result.Considering_installation_cost.Maximum_inverters_with_installation %}
+                <li>Maximum Inverters with Installation: {{ result.Considering_installation_cost.Maximum_inverters_with_installation }}</li>
+            {% endif %}
+            {% if result.Considering_installation_cost.Maximum_batteries_with_installation %}
+                <li>Maximum Batteries with Installation: {{ result.Considering_installation_cost.Maximum_batteries_with_installation }}</li>
+            {% endif %}
+            {% if result.Considering_installation_cost.Maximum_wind_turbines_with_installation %}
+                <li>Maximum Wind Turbines with Installation: {{ result.Considering_installation_cost.Maximum_wind_turbines_with_installation }}</li>
+            {% endif %}
+            {% if result.Considering_installation_cost.Total_maximum_capacity %}
+                <li>Total Maximum Capacity: {{ result.Considering_installation_cost.Total_maximum_capacity }}</li>
+            {% endif %}
+            {% if result.Considering_installation_cost.Maximum_turbine_with_installation %}
+                <li>Maximum Turbine with Installation: {{ result.Considering_installation_cost.Maximum_turbine_with_installation }}</li>
+            {% endif %}
+            {% if result.Considering_installation_cost.Maximum_shaft_with_installation %}
+                <li>Maximum Shaft with Installation: {{ result.Considering_installation_cost.Maximum_shaft_with_installation }}</li>
+            {% endif %}
+            {% if result.Considering_installation_cost.Maximum_rotor_with_installation %}
+                <li>Maximum Rotor with Installation: {{ result.Considering_installation_cost.Maximum_rotor_with_installation }}</li>
+            {% endif %}
+            {% if result.Considering_installation_cost.Maximum_stator_with_installation %}
+                <li>Maximum Stator with Installation: {{ result.Considering_installation_cost.Maximum_stator_with_installation }}</li>
+            {% endif %}
+            {% if result.Considering_installation_cost.Maximum_generator_with_installation %}
+                <li>Maximum Generator with Installation: {{ result.Considering_installation_cost.Maximum_generator_with_installation }}</li>
+            {% endif %}
+        </ul>
+    {% endif %}
+</div>
+<div id="link">
+    <h2>Service providers</h2>
+    <ul id="ul1">
+        <li id="li1"><h4>Tata Power Solar: <a href="https://www.tatapowersolar.com/">https://www.tatapowersolar.com/</a></h4></li>
+    </ul>
+    <ul id="ul2">
+        <li id="li2"><h4>Vikram Solar: <a href="https://www.vikramsolar.com/">https://www.vikramsolar.com/</a></h4></li>
+    </ul>
+    <ul id="ul3">
+        <li id="li3"><h4>Azure Power : <a href="https://www.azurepower.com/">https://www.azurepower.com/</a></h4></li>
+    </ul>
+    <ul id="ul4">
+        <li id="li4"><h4>Hero Future Energies: <a href="https://www.herofutureenergies.com/">https://www.herofutureenergies.com/</a></h4></li>
+    </ul>
+</div>
+</body>
+</html>

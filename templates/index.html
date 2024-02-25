@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('/static/renew.jpg');
+            background-size : cover;
+        }
+        
+        .box {
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #fff;
+            transform: translate(-50%, -50%);
+            background: black;
+            text-align: center;
+            border-radius: 14rem;
+            box-shadow: 5px 5px 50px 50px rgba(252, 5, 5, 0.699);
+            animation: animateBg 5s linear infinite;
+        }
+        
+        @keyframes animateBg {
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+        
+        .box input {
+            border: 0;
+            background: none;
+            margin: 20px auto;
+            display: block;
+            text-align: center;
+            border: 3px solid lightskyblue;
+            padding: 10px 40px 10px 40px; /* Adjust padding for the icon */
+            width: 200px;
+            outline: none;
+            color: #fff;
+            border-radius: 24px;
+            transition: 0.25s;
+            position: relative; /* Make the position relative */
+        }
+        
+        .box input[type="text"]:focus,
+        .box input[type="password"]:focus {
+            width: 280px;
+            border-color: greenyellow;
+        }
+        
+        .box input[type="submit"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 100%;
+            border: 3px solid red;
+            padding: 14px 40px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        
+        .box input[type="submit"]:hover {
+            background: rgb(23, 233, 23);
+        }
+        
+        .signup-link {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s;
+            margin-top: 10px; /* Adjust margin for spacing */
+            font-size: 14px; /* Adjust font size */
+        }
+        
+        /* Icon style */
+        .box .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: lightskyblue;
+        }
+        
+        .email-icon {
+            height:135px;
+            left: 50px; /* Adjust the position of the icon */
+        }
+        
+        .password-icon {
+            left: 50px; /* Adjust the position of the icon */
+        }
+        
+        /* Message style */
+        .message {
+            margin-top: 10px;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form class="box" action="#" method="post" id="login-form">
+        <h2>Login</h2>
+        <div class="input-container">
+            <i class="fas fa-envelope icon email-icon"></i>
+            <input type="text" id="username" name="username" placeholder="Email" required>
+        </div>
+
+        <div class="input-container">
+            <i class="fas fa-lock icon password-icon"></i>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+
+        <button type="button" onclick="login()">Login</button>
+
+        <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+        
+        <!-- Message display -->
+        <div class="message" id="message"></div>
+        <script>
+            function login() {
+                // Perform login validation here
+    
+                // If login is successful, redirect to the welcome page
+                window.location.href = "welcome.html";
+            }
+        </script>
+    </form>
+</body>
+</html>
