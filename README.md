@@ -4,7 +4,7 @@ Welcome to the Personalized Renewable Energy Siting Platform repository! Our pla
 
 ## About
 
-The Personalized Renewable Energy Siting Platform aims to revolutionize the adoption of renewable energy by offering precise recommendations for renewable energy options such as solar panels and wind turbines. By leveraging user-specific data including location, energy needs, square footage, and budget, our platform provides accurate and relevant recommendations that align with individual preferences and environmental goals.
+The Personalized Renewable Energy Siting Platform aims to revolutionize the adoption of renewable energy by offering precise recommendations for renewable energy options such as solar panels, wind turbines, and hydroelectric systems. By leveraging user-specific data including location, energy needs, square footage, and budget, our platform provides accurate and relevant recommendations that align with individual preferences and environmental goals.
 
 ## Features
 
