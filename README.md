@@ -7,9 +7,13 @@ The Personalized Renewable Energy Siting Platform aims to revolutionize the adop
 
 ## Features
 **Personalized Recommendations:** Tailored recommendations based on user inputs and preferences.
+
 **Utilization of Open-Source Data:** Harnesses open-source data on renewable energy potential and costs to enhance recommendation accuracy.
+
 **Promotion of Sustainable Practices:** Aims to promote the adoption of renewable energy sources and reduce carbon emissions for a more sustainable future.
+
 **User-Friendly Interface:** Intuitive interface designed for ease of use by individuals and businesses alike.
+
 **Estimate Option:** Provides a feature to estimate available renewable energy options that fit within the user's budget.
 
 ## Estimate Option
