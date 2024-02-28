@@ -18,8 +18,14 @@ The Personalized Renewable Energy Siting Platform aims to revolutionize the adop
 
 The "Estimate" feature allows users to input their budget and receive a list of renewable energy items that can be purchased within that budget. This functionality enables users to make informed decisions about their renewable energy investments while staying within their financial constraints.
 
+**USAGE**
+Input Data: Enter relevant medical data such as age, sex, cholesterol levels, and exercise habits into the application.
+Prediction: Click on the "Predict" button to generate a prediction on the likelihood of heart disease.
+Result: Receive the prediction result indicating whether the individual is likely to have heart disease or not.
+**
+Our objective is to provide a valuable tool for early detection and prevention of heart disease. By leveraging machine learning techniques and user-friendly interfaces, we aim to empower healthcare professionals and individuals to make informed decisions about heart health and promote proactive measures for heart disease prevention.
 
-
-## Objectives
+ 
+# Objectives
 
 Our goal is to empower users to make informed decisions regarding renewable energy adoption, ultimately contributing to a more sustainable and environmentally friendly future. By providing accurate recommendations and promoting the widespread use of renewable energy sources, we aim to drive positive change and mitigate the impact of climate change.
